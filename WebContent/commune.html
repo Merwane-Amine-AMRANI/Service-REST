@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 5 Transitional//EN" "http://www.w3.org/TR/html5/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>formulaire - Commune </title>
+</head>
+<body>
+
+	<form action="rest/commune/create" method="post">
+		<h3>Nouvelle commune</h3>
+		<table>
+			<tr>
+				<td>nom :</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>code Postal :</td>
+				<td><input type="text" name="codePostal" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="create" /></td>
+				<td>&nbsp;
+				<td>
+			</tr>
+		</table>
+	</form>
+
+	<form action="rest/commune" method="post">
+		<h3>Veuillez entrer le code postale pour changer le nom de la
+			commune</h3>
+		<table>
+			<tr>
+				<td>code Postal :</td>
+				<td><input type="text" name="codePostal" /></td>
+			</tr>
+			<tr>
+				<td>nouveau nom :</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="update" /></td>
+				<td>&nbsp;
+				<td>
+			</tr>
+		</table>
+	</form>
+
+	<form action="rest/commune" method="post">
+		<h3>Veuillez entrer le code postale pour supprimer la commune</h3>
+		<table>
+			<tr>
+				<td>codePostal :</td>
+				<td><input type="text" name="codePostal" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="delete" /></td>
+				<td>&nbsp;
+				<td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

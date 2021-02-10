@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+    http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+    version="2.2">
+    
+	<persistence-unit name="tp-javaee" transaction-type="JTA"> 
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+		<jta-data-source>jdbc/MySQLDS</jta-data-source>
+		
+		<class>org.amrani.exo4.Commune</class>
+		<class>org.amrani.exo4.Departement</class>
+		<class>org.amrani.exo4.Maire</class>
+		
+		
+		<properties>
+					
+			<!-- create-tables | create-or-extend-tables | drop-and-create-tables | none -->
+			<property name="eclipselink.ddl-generation" value="none"/>
+			
+			<property name="eclipselink.target-database" value="MySQL"/>
+			
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
